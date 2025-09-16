@@ -23,6 +23,7 @@ public class SpikeAction : MonoBehaviour
         if (collision.gameObject.CompareTag("SpikeDestroyer"))
         {
             Destroy(gameObject);
+            Debug.Log("Spike : 소멸");
         }
     }
 }
