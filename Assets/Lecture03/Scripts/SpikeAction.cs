@@ -3,18 +3,18 @@ using UnityEngine.UIElements;
 
 public class SpikeAction : MonoBehaviour
 {
-    float start_point;
+    float speed = 5;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
-
+        Application.targetFrameRate = 30;
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(transform.position.x - 0.01f, transform.position.y, transform.position.z);
+        float moveVectorX = Time.deltaTime + speed;
+        transform.position = new Vector3(transform.position.x, transform.position.y - 0.01f, transform.position.z);
 
     }
 
